@@ -1,0 +1,133 @@
+/* Custom styles for children's school website */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes colorful-shadow {
+    0% { box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3); }  /* Purple */
+    33% { box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3); } /* Orange */
+    66% { box-shadow: 0 5px 15px rgba(252, 211, 77, 0.3); } /* Yellow */
+    100% { box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3); } /* Purple */
+}
+
+/* Hover effects for program cards */
+.hover\:shadow-xl:hover {
+    animation: colorful-shadow 3s infinite;
+}
+
+/* Icon animations */
+.fas, .fab {
+    transition: transform 0.3s ease;
+}
+
+.fas:hover, .fab:hover {
+    transform: scale(1.1);
+}
+
+/* Custom styling for form inputs */
+input, textarea {
+    border: 2px solid #e5e7eb;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+/* Navigation link effects */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8B5CF6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Button hover effects */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Section transitions */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8B5CF6;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Hero section gradient overlay */
+.hero-gradient {
+    background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), rgba(249, 115, 22, 0.1), rgba(252, 211, 77, 0.1));
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    h2 {
+        font-size: 2rem !important;
+    }
+    h3 {
+        font-size: 1.5rem !important;
+    }
+}
